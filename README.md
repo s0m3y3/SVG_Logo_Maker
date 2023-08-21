@@ -19,7 +19,7 @@
 ## Credits
 Github user: s0m3y3
 
-Github Link: [https://github.com/s0m3y3/](https://github.com/s0m3y3/)
+Github Repo: [Click here](https://github.com/s0m3y3/SVG_Logo_Maker)
 
 ## License
   MIT License
