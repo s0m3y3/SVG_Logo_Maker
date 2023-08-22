@@ -1,8 +1,8 @@
 const fs = require('fs');
 const inquirer = require("inquirer");
-const Shapes = require("Shapes")
+const Shapes = require("./lib/shape.js")
 
-const shapes = [
+const shapelist = [
     "circle", 
     "triangle", 
     "square", 
@@ -23,23 +23,23 @@ const questions = [
     },
     {
         type: "input",
-        name: "textcolor",
+        name: "text_color",
         message: "What color would you like your text to be?",
     },
     {
         type: "list",
-        name: "shape",
+        name: "shape_name",
         message: "Please select the shape for your logo.",
-        choices: shapes,
+        choices: shapelist,
     },
     {
-        type: "list",
-        name: "shapecolor",
+        type: "input",
+        name: "shape_color",
         message: "What color would you like your shape to be?",
     },
 ];
 
-//function that writes to README0.md file
+//function that writes to to file.
 function writeToFile(fileName, data) {
     fs.writeFile(fileName,data,err => {if(err){console.error(err); return}})
 }
@@ -47,7 +47,7 @@ function writeToFile(fileName, data) {
 //function to initialize app
 function init() {
     inquirer.prompt(questions).then(function (data) {
-        writeToFile("README0.md", generateMarkdown(data));
+        writeToFile("./Assets/logo.svg", Shapes(data));
     });
 }
 

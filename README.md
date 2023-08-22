@@ -11,10 +11,20 @@
 - [Questions](#questions)
 
 ## Description
+Make your own SVG logo! This app, takes four arugment and generate a quick logo! 
+1. Upto three characters-length logo text.
+2. logo text color.
+3. Shape
+4. Shape color. 
 
 ## Installation
+Will need to install the package in node, inquirer v.8.2.4.
 
 ## Usage
+Type node index.js in the command terminal. Complete the prompt lines. 
+
+![](./images/SVG-demo.png)
+
 
 ## Credits
 Github user: s0m3y3
