@@ -1,5 +1,6 @@
 const fs = require('fs');
 const inquirer = require("inquirer");
+const Shapes = require("Shapes")
 
 const shapes = [
     "circle", 
@@ -12,7 +13,13 @@ const questions = [
     {
         type:"input",
         name:"user",
-        message: "Please enter up-to-three characters for your logo."
+        message: "Please enter up-to-three characters for your logo.",
+        validate: function(input){
+            if (input.length >4){
+                return 'Please enter up-to-three characters for your logo.';
+            }
+            return true;
+        }
     },
     {
         type: "input",
@@ -27,7 +34,7 @@ const questions = [
     },
     {
         type: "list",
-        name: "shape",
+        name: "shapecolor",
         message: "What color would you like your shape to be?",
     },
 ];
