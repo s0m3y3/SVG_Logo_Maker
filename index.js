@@ -1,7 +1,7 @@
 const fs = require('fs');
 const inquirer = require("inquirer");
 const Shapes = require("./lib/shape.js")
-let shapes = Shapes.shapes;
+const shapes = Shapes.shapes;
 
 const shapelist = [
     "circle", 
@@ -182,19 +182,19 @@ const questions = [
     {
         type: "input",
         name: "text_color",
-        message: "What color would you like your text to be?",
+        message: "What COLOR would you like your TEXT to be?",
         validate: validateColor
     },
     {
         type: "list",
         name: "shape_name",
-        message: "Please select the shape for your logo.",
+        message: "Please select the SHAPE for your logo.",
         choices: shapelist
     },
     {
         type: "input",
         name: "shape_color",
-        message: "What color would you like your shape to be?",
+        message: "What COLOR would you like your SHAPE to be?",
         validate: validateColor
     },
 ];
@@ -207,8 +207,6 @@ function writeToFile(fileName, data) {
 //function to initialize app
 function init() {
     inquirer.prompt(questions).then(function (data) {
-        // console.log(Shapes.shape(data.text,data.text_color,data.shape_name,data.shape_color));
-        // writeToFile("./Assets/logo.svg", shapes(data.text,data.text_color,data.shape_name,data.shape_color));
         writeToFile("./Assets/logo.svg", shapes(data.text,data.text_color,data.shape_name,data.shape_color));
     });
 }
