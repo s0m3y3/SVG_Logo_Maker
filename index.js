@@ -208,6 +208,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then(function (data) {
         // console.log(Shapes.shape(data.text,data.text_color,data.shape_name,data.shape_color));
+        // writeToFile("./Assets/logo.svg", shapes(data.text,data.text_color,data.shape_name,data.shape_color));
         writeToFile("./Assets/logo.svg", shapes(data.text,data.text_color,data.shape_name,data.shape_color));
     });
 }
