@@ -1,6 +1,7 @@
 const fs = require('fs');
 const inquirer = require("inquirer");
 const Shapes = require("./lib/shape.js")
+let shapes = Shapes.shapes;
 
 const shapelist = [
     "circle", 
@@ -172,7 +173,7 @@ const questions = [
         name:"text",
         message: "Please enter up-to-three characters for your logo.",
         validate: function(input){
-            if (input.length >4){
+            if (input.length >3){
                 return 'Please enter up-to-three characters for your logo.';
             }
             return true;
@@ -206,10 +207,8 @@ function writeToFile(fileName, data) {
 //function to initialize app
 function init() {
     inquirer.prompt(questions).then(function (data) {
-        console.log(data);
-        Shapes(data);
-        console.log(Shapes(data));
-        // writeToFile("./Assets/logo.svg", Shapes(data));
+        // console.log(Shapes.shape(data.text,data.text_color,data.shape_name,data.shape_color));
+        writeToFile("./Assets/logo.svg", shapes(data.text,data.text_color,data.shape_name,data.shape_color));
     });
 }
 
