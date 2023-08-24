@@ -17,13 +17,26 @@ Make your own SVG logo! This app, takes four arugment and generate a quick logo!
 3. Shape
 4. Shape color. 
 
+![](./images/SVG-demo.png)
+
 ## Installation
 Will need to install the package in node, inquirer v.8.2.4.
 
-## Usage
-Type node index.js in the command terminal. Complete the prompt lines. 
+Optional: If you are testing the script, then jest v.29.6.3 is required. 
 
-![](./images/SVG-demo.png)
+## Usage
+Type node " index.js " in the command terminal. Complete the prompt four-questions, and the app will generate the logo and save it under " ./Assets/logo.svg ". 
+
+[SVG video sample!](https://drive.google.com/file/d/1kPlkzBHOgEAbI4Ppt5b7OONHF-VAtehq/view)
+
+![](./images/SVG_sample_inquirer.png)
+
+
+Testing the app, using shapes.test.js: type " npm test " in command line. 
+
+[Shape tests video!](https://drive.google.com/file/d/12OQaGDR88JWe4WQZ1r-4e8qnSuFt4f1S/view)
+
+![](./images/SVG_shapestest.png)
 
 
 ## Credits
